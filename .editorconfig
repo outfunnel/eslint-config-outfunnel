@@ -1,0 +1,30 @@
+# EditorConfig configuration
+# https://editorconfig.org
+
+# For Sublime Text install 'EditorConfig'
+# For VSCode install 'EditorConfig for VSCode'
+# For Atom install 'editorconfig'
+
+# This is the root of the project
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+[*.md]
+indent_style = space
+indent_size = 2
+
+[*.yml]
+indent_style = space
+indent_size = 2
+
+[*.json]
+indent_style = space
+indent_size = 2
+
