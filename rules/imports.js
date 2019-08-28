@@ -2,30 +2,31 @@ module.exports = {
 	env: {
 		es6: true
 	},
+
 	parserOptions: {
 		ecmaVersion: 6,
 		sourceType: 'module'
 	},
+
 	plugins: [
 		'import'
 	],
 
 	settings: {
 		'import/resolver': {
-		node: {
-			extensions: ['.mjs', '.js', '.json']
-		}
+			node: {
+				extensions: ['.mjs', '.js', '.json']
+			}
 		},
 		'import/extensions': [
-		'.js',
-		'.mjs',
-		'.jsx',
+			'.js',
+			'.mjs',
+			'.jsx'
 		],
-		'import/core-modules': [
-		],
+		'import/core-modules': [],
 		'import/ignore': [
-		'node_modules',
-		'\\.(coffee|scss|css|less|hbs|svg|json)$',
+			'node_modules',
+			'\\.(coffee|scss|css|less|hbs|svg|json)$'
 		],
 	},
 
@@ -69,29 +70,29 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
 		// paths are treated both as absolute paths, and relative to process.cwd()
 		'import/no-extraneous-dependencies': ['error', {
-		devDependencies: [
-			'test/**', // tape, common npm pattern
-			'tests/**', // also common npm pattern
-			'spec/**', // mocha, rspec-like pattern
-			'**/__tests__/**', // jest pattern
-			'**/__mocks__/**', // jest pattern
-			'test.{js,jsx}', // repos with a single test file
-			'test-*.{js,jsx}', // repos with multiple top-level test files
-			'**/*{.,_}{test,spec}.{js,jsx}', // tests where the extension or filename suffix denotes that it is a test
-			'**/jest.config.js', // jest config
-			'**/jest.setup.js', // jest setup
-			'**/vue.config.js', // vue-cli config
-			'**/webpack.config.js', // webpack config
-			'**/webpack.config.*.js', // webpack config
-			'**/rollup.config.js', // rollup config
-			'**/rollup.config.*.js', // rollup config
-			'**/gulpfile.js', // gulp config
-			'**/gulpfile.*.js', // gulp config
-			'**/Gruntfile{,.js}', // grunt config
-			'**/protractor.conf.js', // protractor config
-			'**/protractor.conf.*.js', // protractor config
-		],
-		optionalDependencies: false,
+			devDependencies: [
+				'test/**', // tape, common npm pattern
+				'tests/**', // also common npm pattern
+				'spec/**', // mocha, rspec-like pattern
+				'**/__tests__/**', // jest pattern
+				'**/__mocks__/**', // jest pattern
+				'test.{js,jsx}', // repos with a single test file
+				'test-*.{js,jsx}', // repos with multiple top-level test files
+				'**/*{.,_}{test,spec}.{js,jsx}', // tests where the extension or filename suffix denotes that it is a test
+				'**/jest.config.js', // jest config
+				'**/jest.setup.js', // jest setup
+				'**/vue.config.js', // vue-cli config
+				'**/webpack.config.js', // webpack config
+				'**/webpack.config.*.js', // webpack config
+				'**/rollup.config.js', // rollup config
+				'**/rollup.config.*.js', // rollup config
+				'**/gulpfile.js', // gulp config
+				'**/gulpfile.*.js', // gulp config
+				'**/Gruntfile{,.js}', // grunt config
+				'**/protractor.conf.js', // protractor config
+				'**/protractor.conf.*.js', // protractor config
+			],
+			optionalDependencies: false
 		}],
 
 		// Forbid mutable exports
@@ -134,9 +135,9 @@ module.exports = {
 		// Ensure consistent use of file extension within the import path
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
 		'import/extensions': ['error', 'ignorePackages', {
-		js: 'never',
-		mjs: 'never',
-		jsx: 'never',
+			js: 'never',
+			mjs: 'never',
+			jsx: 'never'
 		}],
 
 		// ensure absolute imports are above relative imports and that unassigned imports are ignored
@@ -170,7 +171,7 @@ module.exports = {
 		// prevent importing the submodules of other modules
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
 		'import/no-internal-modules': ['off', {
-		allow: [],
+			allow: []
 		}],
 
 		// Warn if a module could be mistakenly parsed as a script by a consumer
@@ -196,12 +197,12 @@ module.exports = {
 		// Reports if a module's default export is unnamed
 		// https://github.com/benmosher/eslint-plugin-import/blob/d9b712ac7fd1fddc391f7b234827925c160d956f/docs/rules/no-anonymous-default-export.md
 		'import/no-anonymous-default-export': ['off', {
-		allowArray: false,
-		allowArrowFunction: false,
-		allowAnonymousClass: false,
-		allowAnonymousFunction: false,
-		allowLiteral: false,
-		allowObject: false,
+			allowArray: false,
+			allowArrowFunction: false,
+			allowAnonymousClass: false,
+			allowAnonymousFunction: false,
+			allowLiteral: false,
+			allowObject: false
 		}],
 
 		// This rule enforces that all exports are declared at the bottom of the file.
@@ -237,8 +238,8 @@ module.exports = {
 		// dynamic imports require a leading comment with a webpackChunkName
 		// https://github.com/benmosher/eslint-plugin-import/blob/ebafcbf59ec9f653b2ac2a0156ca3bcba0a7cf57/docs/rules/dynamic-import-chunkname.md
 		'import/dynamic-import-chunkname': ['off', {
-		importFunctions: [],
-		webpackChunknameFormat: '[0-9a-zA-Z-_/.]+',
+			importFunctions: [],
+			webpackChunknameFormat: '[0-9a-zA-Z-_/.]+'
 		}],
 
 		// Use this rule to prevent imports to folders in relative parent paths.
@@ -248,9 +249,9 @@ module.exports = {
 		// Reports modules without any exports, or with unused exports
 		// https://github.com/benmosher/eslint-plugin-import/blob/f63dd261809de6883b13b6b5b960e6d7f42a7813/docs/rules/no-unused-modules.md
 		'import/no-unused-modules': ['off', {
-		ignoreExports: [],
-		missingExports: true,
-		unusedExports: true,
+			ignoreExports: [],
+			missingExports: true,
+			unusedExports: true
 		}],
 	},
 };
