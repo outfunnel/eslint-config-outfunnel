@@ -134,7 +134,7 @@ module.exports = {
 
 		// use rest parameters instead of arguments
 		// https://eslint.org/docs/rules/prefer-rest-params
-		'prefer-rest-params': 'error',
+		'prefer-rest-params': 'off',
 
 		// suggest using the spread operator instead of .apply()
 		// https://eslint.org/docs/rules/prefer-spread

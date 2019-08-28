@@ -24,6 +24,9 @@ module.exports = {
 		// disallow use of new operator with the require function
 		'no-new-require': 'error',
 
+		// disallow require() expressions which import private modules
+		'no-unpublished-require': 'off',
+
 		// disallow string concatenation with __dirname and __filename
 		// https://eslint.org/docs/rules/no-path-concat
 		'no-path-concat': 'error',

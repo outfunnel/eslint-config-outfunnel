@@ -23,7 +23,7 @@ module.exports = {
 		'consistent-return': 'error',
 
 		// specify curly brace conventions for all control statements
-		curly: ['error', 'multi-line'],
+		curly: ['error', 'all'],
 
 		// require default case in switch statements
 		'default-case': ['error', { commentPattern: '^no default$' }],
@@ -174,19 +174,19 @@ module.exports = {
 		// disallow parameter object manipulation except for specific exclusions
 		// rule: https://eslint.org/docs/rules/no-param-reassign.html
 		'no-param-reassign': ['error', {
-		props: true,
-		ignorePropertyModificationsFor: [
-			'acc', // for reduce accumulators
-			'accumulator', // for reduce accumulators
-			'e', // for e.returnvalue
-			'ctx', // for Koa routing
-			'req', // for Express requests
-			'request', // for Express requests
-			'res', // for Express responses
-			'response', // for Express responses
-			'$scope', // for Angular 1 scopes
-			'staticContext', // for ReactRouter context
-		]
+			props: true,
+			ignorePropertyModificationsFor: [
+				'acc', // for reduce accumulators
+				'accumulator', // for reduce accumulators
+				'e', // for e.returnvalue
+				'ctx', // for Koa routing
+				'req', // for Express requests
+				'request', // for Express requests
+				'res', // for Express responses
+				'response', // for Express responses
+				'$scope', // for Angular 1 scopes
+				'staticContext', // for ReactRouter context
+			]
 		}],
 
 		// disallow usage of __proto__ property

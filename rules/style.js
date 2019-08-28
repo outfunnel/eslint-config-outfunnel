@@ -24,25 +24,25 @@ module.exports = {
 		// enforce or disallow capitalization of the first letter of a comment
 		// https://eslint.org/docs/rules/capitalized-comments
 		'capitalized-comments': ['off', 'never', {
-		line: {
-			ignorePattern: '.*',
-			ignoreInlineComments: true,
-			ignoreConsecutiveComments: true,
-		},
-		block: {
-			ignorePattern: '.*',
-			ignoreInlineComments: true,
-			ignoreConsecutiveComments: true,
-		},
+			line: {
+				ignorePattern: '.*',
+				ignoreInlineComments: true,
+				ignoreConsecutiveComments: true,
+			},
+			block: {
+				ignorePattern: '.*',
+				ignoreInlineComments: true,
+				ignoreConsecutiveComments: true,
+			}
 		}],
 
 		// require trailing commas in multiline object literals
 		'comma-dangle': ['error', {
-			arrays: 'always-multiline',
-			objects: 'always-multiline',
-			imports: 'always-multiline',
-			exports: 'always-multiline',
-			functions: 'always-multiline'
+			arrays: 'never',
+			objects: 'never',
+			imports: 'never',
+			exports: 'never',
+			functions: 'never'
 		}],
 
 		// enforce spacing before and after comma
@@ -346,7 +346,7 @@ module.exports = {
 		'no-spaced-func': 'error',
 
 		// disallow tab characters entirely
-		'no-tabs': 'error',
+		'no-tabs': 'off',
 
 		// disallow the use of ternary operators
 		'no-ternary': 'off',
@@ -398,7 +398,7 @@ module.exports = {
 		}],
 
 		// allow just one var statement per function
-		'one-var': ['error', 'never'],
+		'one-var': 'off',
 
 		// require a newline around variable declaration
 		// https://eslint.org/docs/rules/one-var-declaration-per-line
@@ -423,7 +423,15 @@ module.exports = {
 
 		// Require or disallow padding lines between statements
 		// https://eslint.org/docs/rules/padding-line-between-statements
-		'padding-line-between-statements': 'off',
+		'padding-line-between-statements': [
+			'error',
+			{ blankLine: 'always', prev: '*', next: 'throw' },
+			{ blankLine: 'always', prev: '*', next: 'return' },
+			{ blankLine: 'always', prev: ['const', 'let', 'var'], next: '*'},
+			{ blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var']},
+			{ blankLine: 'always', prev: 'directive', next: '*' },
+			{ blankLine: 'any', prev: 'directive', next: 'directive' }
+		],
 
 		// Prefer use of an object spread over Object.assign
 		// https://eslint.org/docs/rules/prefer-object-spread
