@@ -1,6 +1,5 @@
 module.exports = {
 	extends: [
-		'eslint:recommended',
 		'./rules/best-practices',
 		'./rules/errors',
 		'./rules/node',
@@ -14,4 +13,4 @@ module.exports = {
 	  ecmaVersion: 2018
 	},
 	rules: {}
-  };
+};
