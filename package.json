@@ -18,6 +18,7 @@
   "homepage": "https://github.com/outfunnel/eslint-config-outfunnel#readme",
   "dependencies": {
     "confusing-browser-globals": "^1.0.8",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0"
   }
 }

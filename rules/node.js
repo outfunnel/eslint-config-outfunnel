@@ -3,6 +3,8 @@ module.exports = {
 		node: true
 	},
 
+	extends: ['plugin:node/recommended'],
+
 	rules: {
 		// enforce return after a callback
 		'callback-return': 'off',
