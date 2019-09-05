@@ -27,7 +27,7 @@ module.exports = {
 		'import/ignore': [
 			'node_modules',
 			'\\.(coffee|scss|css|less|hbs|svg|json)$'
-		],
+		]
 	},
 
 	rules: {
@@ -90,7 +90,7 @@ module.exports = {
 				'**/gulpfile.*.js', // gulp config
 				'**/Gruntfile{,.js}', // grunt config
 				'**/protractor.conf.js', // protractor config
-				'**/protractor.conf.*.js', // protractor config
+				'**/protractor.conf.*.js' // protractor config
 			],
 			optionalDependencies: false
 		}],
@@ -252,6 +252,6 @@ module.exports = {
 			ignoreExports: [],
 			missingExports: true,
 			unusedExports: true
-		}],
-	},
+		}]
+	}
 };

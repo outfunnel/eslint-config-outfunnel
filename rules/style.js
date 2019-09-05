@@ -27,12 +27,12 @@ module.exports = {
 			line: {
 				ignorePattern: '.*',
 				ignoreInlineComments: true,
-				ignoreConsecutiveComments: true,
+				ignoreConsecutiveComments: true
 			},
 			block: {
 				ignorePattern: '.*',
 				ignoreInlineComments: true,
-				ignoreConsecutiveComments: true,
+				ignoreConsecutiveComments: true
 			}
 		}],
 
@@ -50,19 +50,19 @@ module.exports = {
 
 		// enforce one true comma style
 		'comma-style': ['error', 'last', {
-		exceptions: {
-			ArrayExpression: false,
-			ArrayPattern: false,
-			ArrowFunctionExpression: false,
-			CallExpression: false,
-			FunctionDeclaration: false,
-			FunctionExpression: false,
-			ImportDeclaration: false,
-			ObjectExpression: false,
-			ObjectPattern: false,
-			VariableDeclaration: false,
-			NewExpression: false,
-		}
+			exceptions: {
+				ArrayExpression: false,
+				ArrayPattern: false,
+				ArrowFunctionExpression: false,
+				CallExpression: false,
+				FunctionDeclaration: false,
+				FunctionExpression: false,
+				ImportDeclaration: false,
+				ObjectExpression: false,
+				ObjectPattern: false,
+				VariableDeclaration: false,
+				NewExpression: false
+			}
 		}],
 
 		// disallow padding inside computed properties
@@ -115,7 +115,7 @@ module.exports = {
 
 		// this option sets a specific tab width for your code
 		// https://eslint.org/docs/rules/indent
-		indent: ['error', 2, {
+		indent: ['error', 'tab', {
 			SwitchCase: 1,
 			VariableDeclarator: 1,
 			outerIIFEBody: 1,
@@ -149,13 +149,13 @@ module.exports = {
 
 		// require a space before & after certain keywords
 		'keyword-spacing': ['error', {
-		before: true,
-		after: true,
-		overrides: {
-			return: { after: true },
-			throw: { after: true },
-			case: { after: true }
-		}
+			before: true,
+			after: true,
+			overrides: {
+				return: { after: true },
+				throw: { after: true },
+				case: { after: true }
+			}
 		}],
 
 		// enforce position of line comments
@@ -290,7 +290,7 @@ module.exports = {
 				['/', '*'],
 				['&', '|', '<<', '>>', '>>>'],
 				['==', '!=', '===', '!=='],
-				['&&', '||'],
+				['&&', '||']
 			],
 			allowSamePrecedence: false
 		}],
@@ -323,23 +323,23 @@ module.exports = {
 		// disallow certain syntax forms
 		// https://eslint.org/docs/rules/no-restricted-syntax
 		'no-restricted-syntax': [
-		'error',
-		{
-			selector: 'ForInStatement',
-			message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
-		},
-		{
-			selector: 'ForOfStatement',
-			message: 'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.',
-		},
-		{
-			selector: 'LabeledStatement',
-			message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
-		},
-		{
-			selector: 'WithStatement',
-			message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
-		},
+			'error',
+			{
+				selector: 'ForInStatement',
+				message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.'
+			},
+			{
+				selector: 'ForOfStatement',
+				message: 'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.'
+			},
+			{
+				selector: 'LabeledStatement',
+				message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
+			},
+			{
+				selector: 'WithStatement',
+				message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
+			}
 		],
 
 		// disallow space between function identifier and application
@@ -362,8 +362,6 @@ module.exports = {
 		'no-underscore-dangle': ['error', {
 			allow: ['_id'],
 			allowAfterThis: true,
-			allow: [],
-			allowAfterThis: false,
 			allowAfterSuper: false,
 			enforceInMethodNames: true
 		}],
@@ -419,7 +417,7 @@ module.exports = {
 			blocks: 'never',
 			classes: 'never',
 			switches: 'never'
-			}, {
+		}, {
 			allowSingleLineBlocks: true
 		}],
 
@@ -429,8 +427,8 @@ module.exports = {
 			'error',
 			{ blankLine: 'always', prev: '*', next: 'throw' },
 			{ blankLine: 'always', prev: '*', next: 'return' },
-			{ blankLine: 'always', prev: ['const', 'let', 'var'], next: '*'},
-			{ blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var']},
+			{ blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+			{ blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
 			{ blankLine: 'always', prev: 'directive', next: '*' },
 			{ blankLine: 'any', prev: 'directive', next: 'directive' }
 		],
@@ -494,15 +492,15 @@ module.exports = {
 		// require or disallow a space immediately following the // or /* in a comment
 		// https://eslint.org/docs/rules/spaced-comment
 		'spaced-comment': ['error', 'always', {
-		line: {
-			exceptions: ['-', '+'],
-			markers: ['=', '!'], // space here to support sprockets directives
-		},
-		block: {
-			exceptions: ['-', '+'],
-			markers: ['=', '!', ':', '::'], // space here to support sprockets directives and flow comment types
-			balanced: true,
-		}
+			line: {
+				exceptions: ['-', '+'],
+				markers: ['=', '!'] // space here to support sprockets directives
+			},
+			block: {
+				exceptions: ['-', '+'],
+				markers: ['=', '!', ':', '::'], // space here to support sprockets directives and flow comment types
+				balanced: true
+			}
 		}],
 
 		// Enforce spacing around colons of switch statements

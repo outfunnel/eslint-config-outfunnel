@@ -7,7 +7,9 @@
     "node": ">= 6"
   },
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "lint": "$(npm bin)/eslint --report-unused-disable-directives .",
+    "ncu": "$(npm bin)/ncu"
   },
   "repository": {
     "type": "git",
@@ -23,9 +25,28 @@
     "confusing-browser-globals": "^1.0.8"
   },
   "peerDependencies": {
-    "eslint": "^5.16.0 || ^6.2.2",
+    "eslint": "^5.16.0 || ^6.3.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0"
+    "eslint-plugin-node": "^10.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "npm-check-updates": "^3.1.21"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run ncu",
+      "post-merge": "npm install"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "git add"
+    ]
+  }
 }
