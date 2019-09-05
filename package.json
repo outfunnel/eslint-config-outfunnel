@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
-    "lint": "$(npm bin)/eslint --report-unused-disable-directives .",
+    "eslint": "$(npm bin)/eslint --report-unused-disable-directives .",
+    "eclint": "$(npm bin)/eclint check * rules/*",
+    "lint": "npm run eclint && npm run eslint",
     "ncu": "$(npm bin)/ncu"
   },
   "repository": {
@@ -30,6 +32,7 @@
     "eslint-plugin-node": "^10.0.0"
   },
   "devDependencies": {
+    "eclint": "^2.8.1",
     "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
