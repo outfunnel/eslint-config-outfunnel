@@ -1,6 +1,14 @@
 # eslint-config-outfunnel
 Outfunnel Javascript style guide
 
+## How to use
+
+1. Install the correct versions of each package, which are listed by the command:
+```
+npm info "eslint-config-outfunnel@latest" peerDependencies
+```
+2. Add `"extends": ['eslint-config-outfunnel']` to your `.eslintrc.js`
+
 ## How to develop
 - Clone the repository
 - Run `npm install` to install dependencies

@@ -16,7 +16,7 @@ module.exports = {
 		// enforce that class methods use "this"
 		// https://eslint.org/docs/rules/class-methods-use-this
 		'class-methods-use-this': ['error', {
-		exceptMethods: [],
+			exceptMethods: []
 		}],
 
 		// require return statements to either always or never specify values
@@ -67,11 +67,11 @@ module.exports = {
 		// disallow empty functions, except for standalone funcs/arrows
 		// https://eslint.org/docs/rules/no-empty-function
 		'no-empty-function': ['error', {
-		allow: [
-			'arrowFunctions',
-			'functions',
-			'methods',
-		]
+			allow: [
+				'arrowFunctions',
+				'functions',
+				'methods'
+			]
 		}],
 
 		// disallow empty destructuring patterns
@@ -109,10 +109,10 @@ module.exports = {
 		// disallow implicit type conversions
 		// https://eslint.org/docs/rules/no-implicit-coercion
 		'no-implicit-coercion': ['off', {
-		boolean: false,
-		number: true,
-		string: true,
-		allow: [],
+			boolean: false,
+			number: true,
+			string: true,
+			allow: []
 		}],
 
 		// disallow var and named functions in global scope
@@ -140,15 +140,15 @@ module.exports = {
 		// disallow magic numbers
 		// https://eslint.org/docs/rules/no-magic-numbers
 		'no-magic-numbers': ['off', {
-		ignore: [],
-		ignoreArrayIndexes: true,
-		enforceConst: true,
-		detectObjects: false,
+			ignore: [],
+			ignoreArrayIndexes: true,
+			enforceConst: true,
+			detectObjects: false
 		}],
 
 		// disallow use of multiple spaces
 		'no-multi-spaces': ['error', {
-		ignoreEOLComments: false,
+			ignoreEOLComments: false
 		}],
 
 		// disallow use of multiline strings
@@ -185,7 +185,7 @@ module.exports = {
 				'res', // for Express responses
 				'response', // for Express responses
 				'$scope', // for Angular 1 scopes
-				'staticContext', // for ReactRouter context
+				'staticContext' // for ReactRouter context
 			]
 		}],
 
@@ -198,43 +198,43 @@ module.exports = {
 		// disallow certain object properties
 		// https://eslint.org/docs/rules/no-restricted-properties
 		'no-restricted-properties': ['error', {
-		object: 'arguments',
-		property: 'callee',
-		message: 'arguments.callee is deprecated',
+			object: 'arguments',
+			property: 'callee',
+			message: 'arguments.callee is deprecated'
 		}, {
-		object: 'global',
-		property: 'isFinite',
-		message: 'Please use Number.isFinite instead',
+			object: 'global',
+			property: 'isFinite',
+			message: 'Please use Number.isFinite instead'
 		}, {
-		object: 'self',
-		property: 'isFinite',
-		message: 'Please use Number.isFinite instead',
+			object: 'self',
+			property: 'isFinite',
+			message: 'Please use Number.isFinite instead'
 		}, {
-		object: 'window',
-		property: 'isFinite',
-		message: 'Please use Number.isFinite instead',
+			object: 'window',
+			property: 'isFinite',
+			message: 'Please use Number.isFinite instead'
 		}, {
-		object: 'global',
-		property: 'isNaN',
-		message: 'Please use Number.isNaN instead',
+			object: 'global',
+			property: 'isNaN',
+			message: 'Please use Number.isNaN instead'
 		}, {
-		object: 'self',
-		property: 'isNaN',
-		message: 'Please use Number.isNaN instead',
+			object: 'self',
+			property: 'isNaN',
+			message: 'Please use Number.isNaN instead'
 		}, {
-		object: 'window',
-		property: 'isNaN',
-		message: 'Please use Number.isNaN instead',
+			object: 'window',
+			property: 'isNaN',
+			message: 'Please use Number.isNaN instead'
 		}, {
-		property: '__defineGetter__',
-		message: 'Please use Object.defineProperty instead.',
+			property: '__defineGetter__',
+			message: 'Please use Object.defineProperty instead.'
 		}, {
-		property: '__defineSetter__',
-		message: 'Please use Object.defineProperty instead.',
+			property: '__defineSetter__',
+			message: 'Please use Object.defineProperty instead.'
 		}, {
-		object: 'Math',
-		property: 'pow',
-		message: 'Use the exponentiation operator (**) instead.',
+			object: 'Math',
+			property: 'pow',
+			message: 'Use the exponentiation operator (**) instead.'
 		}],
 
 		// disallow use of assignment in return statement
@@ -249,7 +249,7 @@ module.exports = {
 		// disallow self assignment
 		// https://eslint.org/docs/rules/no-self-assign
 		'no-self-assign': ['error', {
-		props: true,
+			props: true
 		}],
 
 		// disallow comparisons where both sides are exactly the same
@@ -267,9 +267,9 @@ module.exports = {
 
 		// disallow usage of expressions in statement position
 		'no-unused-expressions': ['error', {
-		allowShortCircuit: false,
-		allowTernary: false,
-		allowTaggedTemplates: false,
+			allowShortCircuit: false,
+			allowTernary: false,
+			allowTaggedTemplates: false
 		}],
 
 		// disallow unused labels
@@ -334,4 +334,4 @@ module.exports = {
 		// require or disallow Yoda conditions
 		yoda: 'error'
 	}
-	};
+};
