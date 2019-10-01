@@ -5,6 +5,8 @@ module.exports = {
 
 	extends: ['plugin:node/recommended'],
 
+	plugins: ['node'],
+
 	rules: {
 		// enforce return after a callback
 		'callback-return': 'off',
