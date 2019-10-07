@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-outfunnel",
-  "version": "1.0.7",
+  "version": "1.0.5",
   "description": "Javascript style guide",
   "main": "index.js",
   "engines": {
