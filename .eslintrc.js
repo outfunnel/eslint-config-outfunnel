@@ -1,3 +1,7 @@
 module.exports = {
-	extends: './node'
+	extends: './node',
+
+	rules: {
+		'sonarjs/no-duplicate-string': 'off'
+	}
 };
