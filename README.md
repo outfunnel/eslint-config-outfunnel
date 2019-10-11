@@ -7,7 +7,7 @@ Outfunnel Javascript style guide
 ```
 npm info "eslint-config-outfunnel@latest" peerDependencies
 ```
-2. Add `"extends": ['eslint-config-outfunnel']` to your `.eslintrc.js`
+2. Add `"extends": ['outfunnel']` to your `.eslintrc.js`
 
 ## How to develop
 - Clone the repository
