@@ -1,6 +1,5 @@
 module.exports = {
 	extends: [
-		'./rules/prettier',
 		'./rules/best-practices',
 		'./rules/errors',
 		'./rules/style',
