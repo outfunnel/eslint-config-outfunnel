@@ -15,6 +15,9 @@ jobs:
       - name: Check if version has been updated
         id: check
         uses: EndBug/version-check@v1.0.1
+        with:
+          file-name: package.json
+          diff-search: true
       - name: Log when unchanged
         if: steps.check.outputs.changed != 'true'
         run: 'echo "No version change :/"'
