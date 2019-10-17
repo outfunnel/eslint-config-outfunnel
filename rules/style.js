@@ -77,12 +77,15 @@ module.exports = {
 		],
 
 		// disallow padding inside computed properties
+		// https://eslint.org/docs/rules/computed-property-spacing
 		'computed-property-spacing': ['error', 'never'],
 
 		// enforces consistent naming when capturing the current execution context
+		// https://eslint.org/docs/rules/consistent-this
 		'consistent-this': 'off',
 
 		// enforce newline at the end of file, with no multiple empty lines
+		// https://eslint.org/docs/rules/eol-last
 		'eol-last': ['error', 'always'],
 
 		// enforce spacing between functions and their invocations
@@ -214,6 +217,7 @@ module.exports = {
 		'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: false }],
 
 		// enforces empty lines around comments
+		// https://eslint.org/docs/rules/lines-around-comment
 		'lines-around-comment': 'off',
 
 		// require or disallow newlines around directives
@@ -227,6 +231,7 @@ module.exports = {
 		],
 
 		// specify the maximum depth that blocks can be nested
+		// https://eslint.org/docs/rules/max-depth
 		'max-depth': ['error', 4],
 
 		// specify the maximum length of a line in your program
@@ -247,7 +252,7 @@ module.exports = {
 		// specify the max number of lines in a file
 		// https://eslint.org/docs/rules/max-lines
 		'max-lines': [
-			'off',
+			'error',
 			{
 				max: 300,
 				skipBlankLines: true,
@@ -258,7 +263,7 @@ module.exports = {
 		// enforce a maximum function length
 		// https://eslint.org/docs/rules/max-lines-per-function
 		'max-lines-per-function': [
-			'off',
+			'error',
 			{
 				max: 50,
 				skipBlankLines: true,
@@ -268,27 +273,31 @@ module.exports = {
 		],
 
 		// specify the maximum depth callbacks can be nested
-		'max-nested-callbacks': 'off',
+		// https://eslint.org/docs/rules/max-nested-callbacks
+		'max-nested-callbacks': ['error', { max: 3 }],
 
-		// limits the number of parameters that can be used in the function declaration.
-		'max-params': ['off', 3],
+		// limits the number of parameters that can be used in the function declaration
+		// https://eslint.org/docs/rules/max-params
+		'max-params': ['error', 3],
 
 		// specify the maximum number of statement allowed in a function
-		'max-statements': ['off', 10],
+		// https://eslint.org/docs/rules/max-statements
+		'max-statements': ['error', 10],
 
 		// restrict the number of statements per line
 		// https://eslint.org/docs/rules/max-statements-per-line
-		'max-statements-per-line': ['off', { max: 1 }],
+		'max-statements-per-line': ['error', { max: 3 }],
 
 		// enforce a particular style for multiline comments
 		// https://eslint.org/docs/rules/multiline-comment-style
-		'multiline-comment-style': ['off', 'starred-block'],
+		'multiline-comment-style': ['error', 'starred-block'],
 
 		// require multiline ternary
 		// https://eslint.org/docs/rules/multiline-ternary
-		'multiline-ternary': ['off', 'never'],
+		'multiline-ternary': ['error', 'never'],
 
 		// require a capital letter for constructors
+		// https://eslint.org/docs/rules/new-cap
 		'new-cap': [
 			'error',
 			{
@@ -304,10 +313,10 @@ module.exports = {
 		'new-parens': 'error',
 
 		// allow/disallow an empty newline after var statement
-		'newline-after-var': 'off',
+		'newline-after-var': ['error', 'always'],
 
 		// https://eslint.org/docs/rules/newline-before-return
-		'newline-before-return': 'off',
+		'newline-before-return': 'error',
 
 		// enforces new line after each method call in the chain to make it
 		// more readable and easy to maintain
@@ -315,6 +324,7 @@ module.exports = {
 		'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
 
 		// disallow use of the Array constructor
+		// https://eslint.org/docs/rules/no-array-constructor
 		'no-array-constructor': 'error',
 
 		// disallow use of bitwise operators
@@ -326,7 +336,8 @@ module.exports = {
 		'no-continue': 'error',
 
 		// disallow comments inline after code
-		'no-inline-comments': 'off',
+		// https://eslint.org/docs/rules/no-inline-comments
+		'no-inline-comments': 'error',
 
 		// disallow if as the only statement in an else block
 		// https://eslint.org/docs/rules/no-lonely-if
@@ -355,6 +366,7 @@ module.exports = {
 		],
 
 		// disallow mixed spaces and tabs for indentation
+		// https://eslint.org/docs/rules/no-mixed-spaces-and-tabs
 		'no-mixed-spaces-and-tabs': 'error',
 
 		// disallow use of chained assignment expressions
@@ -504,8 +516,19 @@ module.exports = {
 		// https://eslint.org/docs/rules/padding-line-between-statements
 		'padding-line-between-statements': [
 			'error',
-			{ blankLine: 'always', prev: '*', next: 'throw' },
-			{ blankLine: 'always', prev: '*', next: 'return' },
+			{
+				blankLine: 'always',
+				prev: [
+					'block',
+					'block-like',
+					'cjs-export',
+					'class',
+					'export',
+					'import'
+				],
+				next: '*'
+			},
+			{ blankLine: 'always', prev: '*', next: ['throw', 'return'] },
 			{ blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
 			{ blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
 			{ blankLine: 'always', prev: 'directive', next: '*' },
