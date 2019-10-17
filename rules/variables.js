@@ -11,8 +11,10 @@ module.exports = {
 		// disallow deletion of variables
 		'no-delete-var': 'error',
 
-		// disallow labels that share a name with a variable
-		// https://eslint.org/docs/rules/no-label-var
+		/*
+		 * disallow labels that share a name with a variable
+		 * https://eslint.org/docs/rules/no-label-var
+		 */
 		'no-label-var': 'error',
 
 		// disallow specific globals
@@ -34,8 +36,10 @@ module.exports = {
 		// disallow use of undefined when initializing variables
 		'no-undef-init': 'error',
 
-		// disallow use of undefined variable
-		// https://eslint.org/docs/rules/no-undefined
+		/*
+		 * disallow use of undefined variable
+		 * https://eslint.org/docs/rules/no-undefined
+		 */
 		'no-undefined': 'off',
 
 		// disallow declaration of variables that are not used in the code

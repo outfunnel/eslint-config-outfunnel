@@ -41,8 +41,10 @@ module.exports = {
 		// Checks that types in jsdoc comments are defined. This can be used to check unimported types.
 		'jsdoc/require-description': 'off',
 
-		// Requires that block description, explicit @description,
-		// and @param/@returns tag descriptions are written in complete sentences
+		/*
+		 * Requires that block description, explicit @description,
+		 * and @param/@returns tag descriptions are written in complete sentences
+		 */
 		'jsdoc/require-description-complete-sentence': 'warn',
 
 		// Requires that all functions have examples

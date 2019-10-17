@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-outfunnel",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Javascript style guide",
   "main": "index.js",
   "engines": {
@@ -29,7 +29,7 @@
   "peerDependencies": {
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsdoc": "^15.11.0",
+    "eslint-plugin-jsdoc": "^15.11.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-sonarjs": "^0.4.0"
   },
@@ -37,7 +37,7 @@
     "eclint": "^2.8.1",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsdoc": "^15.11.0",
+    "eslint-plugin-jsdoc": "^15.11.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-sonarjs": "^0.4.0",
     "husky": "^3.0.9",
