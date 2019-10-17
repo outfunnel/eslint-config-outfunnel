@@ -10,8 +10,6 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12.x
-      - run: npm install
-      - run: npm test
       - name: Check if version has been updated
         id: check
         uses: EndBug/version-check@v1.0.1
