@@ -160,7 +160,7 @@ module.exports = {
 		 * Enforce the location of arrow function bodies with implicit returns
 		 * https://eslint.org/docs/rules/implicit-arrow-linebreak
 		 */
-		'implicit-arrow-linebreak': ['error', 'beside'],
+		'implicit-arrow-linebreak': 'off',
 
 		/*
 		 * this option sets a specific tab width for your code
@@ -318,7 +318,7 @@ module.exports = {
 		'max-lines-per-function': [
 			'error',
 			{
-				max: 50,
+				max: 100,
 				skipBlankLines: true,
 				skipComments: true,
 				IIFEs: true
@@ -335,13 +335,13 @@ module.exports = {
 		 * limits the number of parameters that can be used in the function declaration
 		 * https://eslint.org/docs/rules/max-params
 		 */
-		'max-params': ['error', 3],
+		'max-params': ['error', 4],
 
 		/*
 		 * specify the maximum number of statement allowed in a function
 		 * https://eslint.org/docs/rules/max-statements
 		 */
-		'max-statements': ['error', 10],
+		'max-statements': 'off',
 
 		/*
 		 * restrict the number of statements per line
