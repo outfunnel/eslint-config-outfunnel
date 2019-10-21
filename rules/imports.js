@@ -210,7 +210,7 @@ module.exports = {
 		 * Require modules with a single export to use a default export
 		 * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
 		 */
-		'import/prefer-default-export': 'error',
+		'import/prefer-default-export': 'off',
 
 		/*
 		 * Restrict which files can be imported in a given folder
@@ -240,7 +240,7 @@ module.exports = {
 		 * prevent importing the submodules of other modules
 		 * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
 		 */
-		'import/no-internal-modules': ['off', {
+		'import/no-internal-modules': ['error', {
 			allow: []
 		}],
 
@@ -297,13 +297,13 @@ module.exports = {
 		 * in a single file.
 		 * https://github.com/benmosher/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/group-exports.md
 		 */
-		'import/group-exports': 'off',
+		'import/group-exports': 'error',
 
 		/*
 		 * forbid default exports. this is a terrible rule, do not use it.
 		 * https://github.com/benmosher/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/no-default-export.md
 		 */
-		'import/no-default-export': 'off',
+		'import/no-default-export': 'error',
 
 		/*
 		 * Prohibit named exports. this is a terrible rule, do not use it.
@@ -342,7 +342,7 @@ module.exports = {
 		 * Use this rule to prevent imports to folders in relative parent paths.
 		 * https://github.com/benmosher/eslint-plugin-import/blob/c34f14f67f077acd5a61b3da9c0b0de298d20059/docs/rules/no-relative-parent-imports.md
 		 */
-		'import/no-relative-parent-imports': 'off',
+		'import/no-relative-parent-imports': 'error',
 
 		/*
 		 * Reports modules without any exports, or with unused exports
