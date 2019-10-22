@@ -48,7 +48,12 @@ module.exports = {
 		'no-process-exit': 'off',
 
 		// restrict usage of specified node modules
-		'no-restricted-modules': 'off',
+		'no-restricted-modules': ['error', {
+			patterns: [
+				'../*',
+				'./../*'
+			]
+		}],
 
 		// disallow use of synchronous methods (off by default)
 		'no-sync': 'off'
