@@ -5,5 +5,12 @@ module.exports = {
 
 	extends: require.resolve('./index'),
 
-	rules: {}
+	rules: {
+		'no-restricted-imports': ['error', {
+			patterns: [
+				'../*',
+				'./../*'
+			]
+		}]
+	}
 };

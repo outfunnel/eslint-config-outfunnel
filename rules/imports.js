@@ -240,7 +240,7 @@ module.exports = {
 		 * prevent importing the submodules of other modules
 		 * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
 		 */
-		'import/no-internal-modules': ['error', {
+		'import/no-internal-modules': ['off', {
 			allow: []
 		}],
 
@@ -342,7 +342,7 @@ module.exports = {
 		 * Use this rule to prevent imports to folders in relative parent paths.
 		 * https://github.com/benmosher/eslint-plugin-import/blob/c34f14f67f077acd5a61b3da9c0b0de298d20059/docs/rules/no-relative-parent-imports.md
 		 */
-		'import/no-relative-parent-imports': 'error',
+		'import/no-relative-parent-imports': 'off',
 
 		/*
 		 * Reports modules without any exports, or with unused exports
