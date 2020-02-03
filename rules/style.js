@@ -381,7 +381,7 @@ module.exports = {
 		 * Enforce a particular style for multiline comments
 		 * https://eslint.org/docs/rules/multiline-comment-style
 		 */
-		'multiline-comment-style': ['error', 'starred-block'],
+		'multiline-comment-style': 'off',
 
 		/*
 		 * Enforce or disallow newlines between operands of ternary expressions
