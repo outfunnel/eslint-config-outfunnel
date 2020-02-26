@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "eslint": "$(npm bin)/eslint --report-unused-disable-directives .",
-    "eclint": "$(npm bin)/eclint check * rules/*",
+    "eclint": "$(npm bin)/lintspaces -e .editorconfig -i 'js-comments' ./**/*",
     "lint": "npm run eclint && npm run eslint",
     "ncu": "$(npm bin)/ncu"
   },
@@ -34,7 +34,6 @@
     "eslint-plugin-sonarjs": "^0.5.0"
   },
   "devDependencies": {
-    "eclint": "^2.8.1",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsdoc": "^21.0.0",
@@ -42,18 +41,18 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
+    "lintspaces-cli": "^0.7.1",
     "npm-check-updates": "^4.0.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run ncu",
+      "pre-commit": "$(npm bin)/lint-staged && npm run ncu",
       "post-merge": "npm install"
     }
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint",
-      "git add"
+      "npm run lint"
     ]
   }
 }
