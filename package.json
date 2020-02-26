@@ -40,9 +40,9 @@
     "eslint-plugin-jsdoc": "^21.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-sonarjs": "^0.5.0",
-    "husky": "^4.2.1",
-    "lint-staged": "^10.0.7",
-    "npm-check-updates": "^4.0.1"
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "npm-check-updates": "^4.0.2"
   },
   "husky": {
     "hooks": {
