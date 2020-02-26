@@ -54,7 +54,7 @@ module.exports = {
 		'jsdoc/require-hyphen-before-param-description': 'off',
 
 		// Checks for presence of jsdoc comments, on class declarations as well as functions
-		'jsdoc/require-jsdoc': 'off',
+		'jsdoc/require-jsdoc': 'warn',
 
 		// Requires that all function parameters are documented
 		'jsdoc/require-param': 'off',
