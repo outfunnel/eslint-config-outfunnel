@@ -54,12 +54,13 @@ module.exports = {
 		'jsdoc/require-hyphen-before-param-description': 'off',
 
 		// Checks for presence of jsdoc comments, on class declarations as well as functions
-		'jsdoc/require-jsdoc': ['warn', {
-			publicOnly: true,
+		'jsdoc/require-jsdoc': 'off',
+
+		// Use this deprecated rule instead of 'jsdoc/require-jsdoc' as it won't try to autofix the issues
+		'require-jsdoc': ['warn', {
 			require: {
 				ArrowFunctionExpression: true,
 				ClassDeclaration: true,
-				ClassExpression: true,
 				FunctionDeclaration: true,
 				FunctionExpression: true,
 				MethodDefinition: true
