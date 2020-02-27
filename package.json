@@ -7,7 +7,7 @@
     "node": ">= 12"
   },
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "test": "echo \\\"Error: no test specified\\\" && exit 0",
     "eslint": "$(npm bin)/eslint --report-unused-disable-directives .",
     "eclint": "$(npm bin)/lintspaces -e .editorconfig -i 'js-comments' ./**/*",
     "lint": "npm run eclint && npm run eslint",
