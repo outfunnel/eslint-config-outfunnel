@@ -11,7 +11,9 @@ module.exports = {
 		 * Enforce line breaks between array elements
 		 * https://eslint.org/docs/rules/array-element-newline
 		 */
-		'array-element-newline': ['off', { multiline: true, minItems: 3 }],
+		'array-element-newline': ['off', {
+			multiline: true, minItems: 3
+		}],
 
 		/*
 		 * Enforce spacing inside array brackets
@@ -35,7 +37,9 @@ module.exports = {
 		 * Require camel case names
 		 * https://eslint.org/docs/rules/camelcase
 		 */
-		camelcase: ['error', { properties: 'never', ignoreDestructuring: true }],
+		camelcase: ['error', {
+			properties: 'never', ignoreDestructuring: true
+		}],
 
 		/*
 		 * Enforce or disallow capitalization of the first letter of a comment
@@ -77,7 +81,9 @@ module.exports = {
 		 * Enforces spacing around commas
 		 * https://eslint.org/docs/rules/comma-spacing
 		 */
-		'comma-spacing': ['error', { before: false, after: true }],
+		'comma-spacing': ['error', {
+			before: false, after: true
+		}],
 
 		/*
 		 * Enforce one true comma style
@@ -170,7 +176,9 @@ module.exports = {
 		 * (variable names, property names etc.)
 		 * https://eslint.org/docs/rules/id-length
 		 */
-		'id-length': ['error', { min: 2, max: 50 }],
+		'id-length': ['error', {
+			min: 2, max: 50
+		}],
 
 		/*
 		 * Require identifiers to match the provided regular expression
@@ -241,7 +249,9 @@ module.exports = {
 		 * Enforces spacing between keys and values in object literal properties
 		 * https://eslint.org/docs/rules/key-spacing
 		 */
-		'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+		'key-spacing': ['error', {
+			beforeColon: false, afterColon: true
+		}],
 
 		/*
 		 * Enforce consistent spacing before and after keywords
@@ -502,7 +512,9 @@ module.exports = {
 		 * Disallow multiple empty lines, only one newline at the end, and no new lines at the beginning
 		 * https://eslint.org/docs/rules/no-multiple-empty-lines
 		 */
-		'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 1, maxEOF: 0 }],
+		'no-multiple-empty-lines': ['error', {
+			max: 1, maxBOF: 1, maxEOF: 0
+		}],
 
 		/*
 		 * Disallow negated conditions
@@ -633,10 +645,18 @@ module.exports = {
 		'object-curly-newline': [
 			'error',
 			{
-				ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
-				ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
-				ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
-				ExportDeclaration: { minProperties: 4, multiline: true, consistent: true }
+				ObjectExpression: {
+					minProperties: 2, multiline: true, consistent: true
+				},
+				ObjectPattern: {
+					minProperties: 2, multiline: true, consistent: true
+				},
+				ImportDeclaration: {
+					minProperties: 2, multiline: true, consistent: true
+				},
+				ExportDeclaration: {
+					minProperties: 2, multiline: true, consistent: true
+				}
 			}
 		],
 
@@ -769,7 +789,9 @@ module.exports = {
 		'quote-props': [
 			'error',
 			'as-needed',
-			{ keywords: false, unnecessary: true, numbers: false }
+			{
+				keywords: false, unnecessary: true, numbers: false
+			}
 		],
 
 		/*
@@ -794,7 +816,9 @@ module.exports = {
 		 * Enforce spacing before and after semicolons
 		 * https://eslint.org/docs/rules/semi-spacing
 		 */
-		'semi-spacing': ['error', { before: false, after: true }],
+		'semi-spacing': ['error', {
+			before: false, after: true
+		}],
 
 		/*
 		 * Enforce location of semicolons
@@ -806,7 +830,9 @@ module.exports = {
 		 * Requires object keys to be sorted
 		 * https://eslint.org/docs/rules/sort-keys
 		 */
-		'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
+		'sort-keys': ['off', 'asc', {
+			caseSensitive: false, natural: true
+		}],
 
 		/*
 		 * Sort variables within the same declaration block
@@ -884,7 +910,9 @@ module.exports = {
 		 * Enforce spacing around colons of switch statements
 		 * https://eslint.org/docs/rules/switch-colon-spacing
 		 */
-		'switch-colon-spacing': ['error', { after: true, before: false }],
+		'switch-colon-spacing': ['error', {
+			after: true, before: false
+		}],
 
 		/*
 		 * Require or disallow spacing between template tags and their literals

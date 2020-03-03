@@ -31,7 +31,9 @@ module.exports = {
 		 * require space before/after arrow function's arrow
 		 * https://eslint.org/docs/rules/arrow-spacing
 		 */
-		'arrow-spacing': ['error', { before: true, after: true }],
+		'arrow-spacing': ['error', {
+			before: true, after: true
+		}],
 
 		// verify super() callings in constructors
 		'constructor-super': 'error',
@@ -40,7 +42,9 @@ module.exports = {
 		 * enforce the spacing around the * in generator functions
 		 * https://eslint.org/docs/rules/generator-star-spacing
 		 */
-		'generator-star-spacing': ['error', { before: false, after: true }],
+		'generator-star-spacing': ['error', {
+			before: false, after: true
+		}],
 
 		/*
 		 * disallow modifying variables of class declarations
