@@ -227,7 +227,9 @@ module.exports = {
 		 * Disallow use of labels for anything other then loops and switches
 		 * https://eslint.org/docs/rules/no-labels
 		 */
-		'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
+		'no-labels': ['error', {
+			allowLoop: false, allowSwitch: false
+		}],
 
 		/*
 		 * Disallow unnecessary nested blocks
@@ -517,7 +519,9 @@ module.exports = {
 		 * Disallow usage of configurable warning terms in comments: e.g. todo
 		 * https://eslint.org/docs/rules/no-warning-comments
 		 */
-		'no-warning-comments': ['off', { terms: ['todo', 'fixme', 'xxx'], location: 'start' }],
+		'no-warning-comments': ['off', {
+			terms: ['todo', 'fixme', 'xxx'], location: 'start'
+		}],
 
 		/*
 		 * Disallow use of the with statement
