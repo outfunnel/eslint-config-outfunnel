@@ -56,18 +56,6 @@ module.exports = {
 		// Checks for presence of jsdoc comments, on class declarations as well as functions
 		'jsdoc/require-jsdoc': 'off',
 
-		// Use this deprecated rule instead of jsdoc/require-jsdoc as it won't try to autofix the issues
-		// @TODO: Use jsdoc/require-jsdoc when this issue is resolved: https://github.com/gajus/eslint-plugin-jsdoc/issues/372
-		'require-jsdoc': ['warn', {
-			require: {
-				ArrowFunctionExpression: true,
-				ClassDeclaration: true,
-				FunctionDeclaration: true,
-				FunctionExpression: true,
-				MethodDefinition: true
-			}
-		}],
-
 		// Requires that all function parameters are documented
 		'jsdoc/require-param': 'off',
 
