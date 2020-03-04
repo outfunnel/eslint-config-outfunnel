@@ -646,16 +646,16 @@ module.exports = {
 			'error',
 			{
 				ObjectExpression: {
-					minProperties: 2, multiline: true, consistent: true
+					minProperties: 4, multiline: true, consistent: true
 				},
 				ObjectPattern: {
-					minProperties: 2, multiline: true, consistent: true
+					minProperties: 4, multiline: true, consistent: true
 				},
 				ImportDeclaration: {
-					minProperties: 2, multiline: true, consistent: true
+					minProperties: 4, multiline: true, consistent: true
 				},
 				ExportDeclaration: {
-					minProperties: 2, multiline: true, consistent: true
+					minProperties: 4, multiline: true, consistent: true
 				}
 			}
 		],
@@ -801,10 +801,20 @@ module.exports = {
 		quotes: ['error', 'single', { avoidEscape: true }],
 
 		/*
-		 * Do not require jsdoc
+		 * Require jsdoc
 		 * https://eslint.org/docs/rules/require-jsdoc
+		 * Use this deprecated rule instead of jsdoc/require-jsdoc as it won't try to autofix the issues
+		 * @TODO: Use jsdoc/require-jsdoc when this issue is resolved: https://github.com/gajus/eslint-plugin-jsdoc/issues/372
 		 */
-		'require-jsdoc': 'off',
+		'require-jsdoc': ['warn', {
+			require: {
+				ArrowFunctionExpression: true,
+				ClassDeclaration: true,
+				FunctionDeclaration: true,
+				FunctionExpression: true,
+				MethodDefinition: true
+			}
+		}],
 
 		/*
 		 * Require or disallow use of semicolons instead of ASI
