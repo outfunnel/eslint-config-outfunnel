@@ -8,7 +8,8 @@ module.exports = {
 		'./rules/imports',
 		'./rules/strict',
 		'./rules/sonar',
-		'./rules/jsdoc'
+		'./rules/jsdoc',
+		'./rules/moment'
 	].map(require.resolve),
 	parserOptions: {
 		ecmaVersion: 2020
