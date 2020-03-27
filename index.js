@@ -10,7 +10,8 @@ module.exports = {
 		'./rules/sonar',
 		'./rules/jsdoc',
 		'./rules/moment',
-		'./rules/underscore'
+		'./rules/underscore',
+		'./rules/fp'
 	].map(require.resolve),
 	parserOptions: {
 		ecmaVersion: 2020
