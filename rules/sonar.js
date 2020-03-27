@@ -1,7 +1,8 @@
 module.exports = {
-	extends: ['plugin:sonarjs/recommended'],
-
+	// https://github.com/SonarSource/eslint-plugin-sonarjs
 	plugins: ['sonarjs'],
+
+	extends: ['plugin:sonarjs/recommended'],
 
 	rules: {}
 };
