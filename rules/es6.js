@@ -13,6 +13,11 @@ module.exports = {
 	},
 
 	rules: {
+		/**
+		 * enforces await in async function
+		 * https://eslint.org/docs/rules/require-await
+		 */
+		'require-await': 'warn',
 		/*
 		 * enforces no braces where they can be omitted
 		 * https://eslint.org/docs/rules/arrow-body-style
