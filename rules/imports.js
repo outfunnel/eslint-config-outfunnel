@@ -323,7 +323,7 @@ module.exports = {
 		 * Forbid cyclical dependencies between modules
 		 * https://github.com/benmosher/eslint-plugin-import/blob/d81f48a2506182738409805f5272eff4d77c9348/docs/rules/no-cycle.md
 		 */
-		'import/no-cycle': ['error', { maxDepth: Infinity }],
+		'import/no-cycle': ['error', { maxDepth: Number.MAX_SAFE_INTEGER }],
 
 		/*
 		 * Ensures that there are no useless path segments
