@@ -21,7 +21,7 @@ module.exports = {
 		// Reports invalid block tag names
 		'jsdoc/check-tag-names': 'warn',
 
-		//  Reports invalid types
+		// Reports invalid types
 		'jsdoc/check-types': 'warn',
 
 		// Reports an issue with any non-constructor function using @implements
@@ -36,9 +36,10 @@ module.exports = {
 		// This rule reports types being used on @param or @returns
 		'jsdoc/no-types': 'off',
 
+		// Checks that types in jsdoc comments are defined. This can be used to check unimported types.
 		'jsdoc/no-undefined-types': 'off',
 
-		// Checks that types in jsdoc comments are defined. This can be used to check unimported types.
+		// Requires that all functions have a description.
 		'jsdoc/require-description': 'off',
 
 		/*
@@ -54,7 +55,17 @@ module.exports = {
 		'jsdoc/require-hyphen-before-param-description': 'off',
 
 		// Checks for presence of jsdoc comments, on class declarations as well as functions
-		'jsdoc/require-jsdoc': 'off',
+		'jsdoc/require-jsdoc': ['warn', {
+			enableFixer: false,
+			require: {
+				ArrowFunctionExpression: true,
+				ClassDeclaration: true,
+				ClassExpression: true,
+				FunctionDeclaration: true,
+				FunctionExpression: true,
+				MethodDefinition: true
+			}
+		}],
 
 		// Requires that all function parameters are documented
 		'jsdoc/require-param': 'off',
