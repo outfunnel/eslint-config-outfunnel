@@ -17,7 +17,7 @@ npm info "eslint-config-outfunnel@latest" peerDependencies
 ## Versioning
 Tightening of any checks means breaking change and should be published with major version release. Relaxation of rules and fixing issues are published under minor and patch versions.
 - **Major:** Breaking changes and/or major ESLint version update
-- **Minor:** Relaxation of rules or fine-tuning current rules
+- **Minor:** Relaxation of rules or fine-tuning current rules. Also when tightening rules to warn
 - **Patch:** Fixing of minor oversights
 
 ## How to publish new version
