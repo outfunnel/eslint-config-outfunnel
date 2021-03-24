@@ -27,6 +27,7 @@
     "confusing-browser-globals": "^1.0.9"
   },
   "peerDependencies": {
+    "@getify/eslint-plugin-proper-ternary": "^3.0.1",
     "eslint": "^7.9.0",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.22.0",
@@ -37,6 +38,7 @@
     "eslint-plugin-you-dont-need-momentjs": "^1.6.0"
   },
   "devDependencies": {
+    "@getify/eslint-plugin-proper-ternary": "^3.0.1",
     "eslint": "^7.9.0",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.22.0",
