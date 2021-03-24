@@ -11,7 +11,8 @@ module.exports = {
 		'./rules/jsdoc',
 		'./rules/moment',
 		'./rules/underscore',
-		'./rules/fp'
+		'./rules/fp',
+		'./rules/proper-ternary'
 	].map(require.resolve),
 	parserOptions: {
 		ecmaVersion: 2020

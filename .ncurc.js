@@ -1,3 +1,6 @@
 module.exports = {
-	upgrade: true
+	upgrade: true,
+	reject:  [
+		'husky'
+	]
 };
