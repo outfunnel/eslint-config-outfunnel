@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Publish to the registry
+
+jobs:
+  publish:
+    uses: outfunnel/devops-public/.github/workflows/publish.yml@master
+    secrets: inherit
