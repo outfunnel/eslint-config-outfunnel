@@ -11,6 +11,7 @@
     "eslint": "$(npm bin)/eslint --report-unused-disable-directives .",
     "eclint": "$(npm bin)/lintspaces -e .editorconfig -i 'js-comments' ./**/*",
     "lint": "npm run eclint && npm run eslint",
+    "postversion": "git tag -d `git describe --tags`",
     "ncu": "$(npm bin)/ncu"
   },
   "repository": {
@@ -52,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "$(npm bin)/lint-staged && npm run ncu",
+      "pre-commit": "$(npm bin)/lint-staged",
       "post-merge": "npm install"
     }
   },
