@@ -21,6 +21,6 @@ Tightening of any checks means breaking change and should be published with majo
 - **Patch:** Fixing of minor oversights
 
 ## How to publish new version
-- Check [NPM package publishing guide](https://www.notion.so/outfunnel/Publishing-NPM-libraries-ada823f30d60489abe091b86b39594a4)
 - Run `npm version [patch|minor|major] -m "Version commit message"`
-- Merge to master and GitHub Action will build and publish new package
+- Add the version bump commit to the pull request
+- Merge to master and GitHub Action will build, publish and then tag the commit if successful
