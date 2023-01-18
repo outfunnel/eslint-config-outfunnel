@@ -21,7 +21,6 @@ Tightening of any checks means breaking change and should be published with majo
 - **Patch:** Fixing of minor oversights
 
 ## How to publish new version
-- Check [NPM package publishing guide](https://github.com/outfunnel/outfunnel/wiki/Publishing-NPM-libraries)
 - Run `npm version [patch|minor|major] -m "Version commit message"`
-- Push changes: `git push --follow-tags`
-- Merge to master and Codeship will build and publish new package
+- Add the version bump commit to the pull request
+- Merge to master and GitHub Action will build, publish and then tag the commit if successful

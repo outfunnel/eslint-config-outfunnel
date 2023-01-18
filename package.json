@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-outfunnel",
-  "version": "1.8.2",
+  "version": "1.8.4",
   "description": "Javascript style guide",
   "main": "index.js",
   "engines": {
@@ -11,6 +11,7 @@
     "eslint": "$(npm bin)/eslint --report-unused-disable-directives .",
     "eclint": "$(npm bin)/lintspaces -e .editorconfig -i 'js-comments' ./**/*",
     "lint": "npm run eclint && npm run eslint",
+    "postversion": "git tag -d `git describe --tags`",
     "ncu": "$(npm bin)/ncu"
   },
   "repository": {
@@ -28,14 +29,13 @@
   },
   "peerDependencies": {
     "@getify/eslint-plugin-proper-ternary": "^3.1.1",
-    "eslint": "^8.4.1",
+    "eslint": "^8.32.0",
     "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsdoc": "^37.1.0",
+    "eslint-plugin-import": "^2.27.4",
+    "eslint-plugin-jsdoc": "^39.6.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-sonarjs": "^0.11.0",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
-    "eslint-plugin-you-dont-need-momentjs": "^1.6.0"
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0"
   },
   "devDependencies": {
     "@getify/eslint-plugin-proper-ternary": "^3.1.1",
@@ -46,7 +46,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-sonarjs": "^0.18.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
-    "eslint-plugin-you-dont-need-momentjs": "^1.6.0",
     "husky": "^4.3.8",
     "lint-staged": "^13.1.0",
     "lintspaces-cli": "^0.8.0",
@@ -54,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "$(npm bin)/lint-staged && npm run ncu",
+      "pre-commit": "$(npm bin)/lint-staged",
       "post-merge": "npm install"
     }
   },
