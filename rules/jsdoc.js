@@ -6,9 +6,6 @@ module.exports = {
 		// Reports invalid alignment of JSDoc block asterisks
 		'jsdoc/check-alignment': 'warn',
 
-		// Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules
-		'jsdoc/check-examples': 'warn',
-
 		// Reports invalid padding inside JSDoc block
 		'jsdoc/check-indentation': 'warn',
 
