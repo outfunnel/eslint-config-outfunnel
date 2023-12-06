@@ -9,7 +9,6 @@ module.exports = {
 		'./rules/strict',
 		'./rules/sonar',
 		'./rules/jsdoc',
-		'./rules/underscore',
 		'./rules/fp',
 		'./rules/proper-ternary'
 	].map(require.resolve),
