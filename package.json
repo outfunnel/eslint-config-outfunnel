@@ -29,12 +29,12 @@
   },
   "peerDependencies": {
     "@getify/eslint-plugin-proper-ternary": "^3.1.1",
-    "eslint": "^8.32.0",
-    "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "^2.27.4",
-    "eslint-plugin-jsdoc": "^39.6.4",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-sonarjs": "^0.21.0"
+    "eslint": "8.x",
+    "eslint-plugin-fp": "2.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsdoc": "46.x",
+    "eslint-plugin-node": "11.x",
+    "eslint-plugin-sonarjs": "0.x"
   },
   "devDependencies": {
     "@getify/eslint-plugin-proper-ternary": "^3.1.1",
