@@ -48,7 +48,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "lintspaces-cli": "^0.8.0",
-    "npm-check-updates": "^16.14.11"
+    "npm-check-updates": "^19.3.2"
   },
   "lint-staged": {
     "*.js": [
