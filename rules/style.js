@@ -453,12 +453,6 @@ module.exports = {
 		'no-bitwise': 'error',
 
 		/*
-		 * Disallow use of the continue statement
-		 * https://eslint.org/docs/rules/no-continue
-		 */
-		'no-continue': 'error',
-
-		/*
 		 * Disallow comments inline after code
 		 * https://eslint.org/docs/rules/no-inline-comments
 		 */
